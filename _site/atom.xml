@@ -4,7 +4,7 @@
  <title>Blog</title>
  <link href="http://itsligo.github.io/blog//atom.xml" rel="self"/>
  <link href="http://itsligo.github.io/blog//"/>
- <updated>2015-10-14T19:55:29+01:00</updated>
+ <updated>2015-10-14T20:13:50+01:00</updated>
  <id>http://itsligo.github.io/blog/</id>
  <author>
    <name>John Kelleher</name>
@@ -17,9 +17,9 @@
    <link href="http://itsligo.github.io/blog//2013/12/28/introducing-hyde/"/>
    <updated>2013-12-28T00:00:00+00:00</updated>
    <id>http://itsligo.github.io/blog//2013/12/28/introducing-hyde</id>
-   <content type="html">&lt;p&gt;Hyde is a brazen two-column &lt;a href=&quot;http://jekyllrb.com&quot;&gt;Jekyll&lt;/a&gt; theme that pairs a prominent sidebar with uncomplicated content. It&amp;#39;s based on &lt;a href=&quot;http://getpoole.com&quot;&gt;Poole&lt;/a&gt;, the Jekyll butler.&lt;/p&gt;
+   <content type="html">&lt;p&gt;Hyded is a brazen two-column &lt;a href=&quot;http://jekyllrb.com&quot;&gt;Jekyll&lt;/a&gt; theme that pairs a prominent sidebar with uncomplicated content. It&amp;#39;s based on &lt;a href=&quot;http://getpoole.com&quot;&gt;Poole&lt;/a&gt;, the Jekyll butler.&lt;/p&gt;
 
-&lt;h3&gt;Built on Poole&lt;/h3&gt;
+&lt;h3&gt;Built on Poole but modded locally then built&lt;/h3&gt;
 
 &lt;p&gt;Poole is the Jekyll Butler, serving as an upstanding and effective foundation for Jekyll themes by &lt;a href=&quot;https://twitter.com/mdo&quot;&gt;@mdo&lt;/a&gt;. Poole, and every theme built on it (like Hyde here) includes the following:&lt;/p&gt;
 
