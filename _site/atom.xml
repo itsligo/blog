@@ -4,7 +4,7 @@
  <title>Blog</title>
  <link href="http://itsligo.github.io/blog//atom.xml" rel="self"/>
  <link href="http://itsligo.github.io/blog//"/>
- <updated>2015-10-14T21:01:42+01:00</updated>
+ <updated>2015-10-14T21:24:04+01:00</updated>
  <id>http://itsligo.github.io/blog/</id>
  <author>
    <name>John Kelleher</name>
@@ -14,9 +14,9 @@
  
  <entry>
    <title>Stage 4-6</title>
-   <link href="http://itsligo.github.io/blog//2015/10/26/stage4/"/>
-   <updated>2015-10-26T00:00:00+00:00</updated>
-   <id>http://itsligo.github.io/blog//2015/10/26/stage4</id>
+   <link href="http://itsligo.github.io/blog//2015/11/02/stage4/"/>
+   <updated>2015-11-02T00:00:00+00:00</updated>
+   <id>http://itsligo.github.io/blog//2015/11/02/stage4</id>
    <content type="html">&lt;h3&gt;Blog MVC Application for RAD301 (2015-16)&lt;/h3&gt;
 
 &lt;p&gt;MVC App to work with Blogs &amp;amp; Posts. A number of branches (Stage&lt;em&gt;x&lt;/em&gt;) add progressively to the objectives of the app. Checkout each branch to see the new features.&lt;/p&gt;
@@ -26,6 +26,17 @@
 &lt;h4&gt;Branch &lt;strong&gt;Stage 5&lt;/strong&gt; (w/s 9-11-15)&lt;/h4&gt;
 
 &lt;h4&gt;Branch &lt;strong&gt;Stage 4&lt;/strong&gt; (w/s 2-11-15)&lt;/h4&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Stage 3</title>
+   <link href="http://itsligo.github.io/blog//2015/10/26/stage3/"/>
+   <updated>2015-10-26T00:00:00+00:00</updated>
+   <id>http://itsligo.github.io/blog//2015/10/26/stage3</id>
+   <content type="html">&lt;h4&gt;Branch &lt;strong&gt;Stage 3&lt;/strong&gt; (w/s 26-10-15)&lt;/h4&gt;
+
+&lt;p&gt;Mid-term Break - will front-load material via video recording for work over mid-term.&lt;/p&gt;
 </content>
  </entry>
  
@@ -43,17 +54,6 @@ Concepts covered:
 * Basic querying of POCO to populate &lt;strong&gt;ViewModels&lt;/strong&gt;
 * Bootstrap enhanced &lt;strong&gt;Views&lt;/strong&gt;
 * Some UI enhancements via jQuery/Bootstrap - perhaps integrated Google Map for &lt;strong&gt;Author&lt;/strong&gt; city.&lt;/p&gt;
-</content>
- </entry>
- 
- <entry>
-   <title>Stage 3</title>
-   <link href="http://itsligo.github.io/blog//2015/10/15/stage3/"/>
-   <updated>2015-10-15T00:00:00+01:00</updated>
-   <id>http://itsligo.github.io/blog//2015/10/15/stage3</id>
-   <content type="html">&lt;h4&gt;Branch &lt;strong&gt;Stage 3&lt;/strong&gt; (w/s 26-10-15)&lt;/h4&gt;
-
-&lt;p&gt;Mid-term Break - will front-load material via video recording for work over mid-term.&lt;/p&gt;
 </content>
  </entry>
  
