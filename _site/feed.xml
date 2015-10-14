@@ -7,44 +7,22 @@
     <atom:link href="http://jkelleher.me/feed.xml" rel="self" type="application/rss+xml" />
     
       <item>
-        <title>Stage 4-6</title>
-        <description>&lt;h3&gt;Blog MVC Application for RAD301 (2015-16)&lt;/h3&gt;
-
-&lt;p&gt;MVC App to work with Blogs &amp;amp; Posts. A number of branches (Stage&lt;em&gt;x&lt;/em&gt;) add progressively to the objectives of the app. Checkout each branch to see the new features.&lt;/p&gt;
-
-&lt;h4&gt;Branch &lt;strong&gt;Stage 6&lt;/strong&gt; (w/s 16-11-15)&lt;/h4&gt;
-
-&lt;h4&gt;Branch &lt;strong&gt;Stage 5&lt;/strong&gt; (w/s 9-11-15)&lt;/h4&gt;
-
-&lt;h4&gt;Branch &lt;strong&gt;Stage 4&lt;/strong&gt; (w/s 2-11-15)&lt;/h4&gt;
-</description>
-        <pubDate>Mon, 02 Nov 2015 00:00:00 +0000</pubDate>
-        <link>http://jkelleher.me/stage4/</link>
-        <guid isPermaLink="true">http://jkelleher.me/stage4/</guid>
-      </item>
-    
-      <item>
-        <title>Stage 3</title>
-        <description>&lt;h4&gt;Branch &lt;strong&gt;Stage 3&lt;/strong&gt; (w/s 26-10-15)&lt;/h4&gt;
-
-&lt;p&gt;Mid-term Break - will front-load material via video recording for work over mid-term.&lt;/p&gt;
-</description>
-        <pubDate>Mon, 26 Oct 2015 00:00:00 +0000</pubDate>
-        <link>http://jkelleher.me/stage3/</link>
-        <guid isPermaLink="true">http://jkelleher.me/stage3/</guid>
-      </item>
-    
-      <item>
         <title>Stage 2</title>
         <description>&lt;h4&gt;Branch &lt;strong&gt;Stage 2&lt;/strong&gt; (w/s 19-10-15)&lt;/h4&gt;
 
-&lt;p&gt;Home page depicts a list of &lt;strong&gt;Blogs&lt;/strong&gt; with some complementary data - e.g. number of posts presented in a CSS-enhanced layout. Clicking a &lt;strong&gt;Blog&lt;/strong&gt; (either the row depicting the blog or via a button) leads to a &lt;strong&gt;View&lt;/strong&gt; for each &lt;strong&gt;Blog&lt;/strong&gt; revealing more details of the &lt;strong&gt;Blog&lt;/strong&gt; such as a list of &lt;strong&gt;Posts&lt;/strong&gt;s for that &lt;strong&gt;Blog&lt;/strong&gt;. Links going in the reverse direction should also be coded. Again Bootstrap is used to improve presentation of this data.
-&lt;strong&gt;Models&lt;/strong&gt; are improved to provide an &lt;strong&gt;Author&lt;/strong&gt; class with some attributes such as Name &amp;amp; Address (city will suffice).
-Concepts covered:
-* Data Annotations - to decorate fields for inclusion in &lt;strong&gt;Views&lt;/strong&gt;
-* Basic querying of POCO to populate &lt;strong&gt;ViewModels&lt;/strong&gt;
-* Bootstrap enhanced &lt;strong&gt;Views&lt;/strong&gt;
-* Some UI enhancements via jQuery/Bootstrap - perhaps integrated Google Map for &lt;strong&gt;Author&lt;/strong&gt; city.&lt;/p&gt;
+&lt;p&gt;Home page depicts a list of &lt;strong&gt;Blogs&lt;/strong&gt; with some complementary data - e.g. number of posts presented in a CSS-enhanced layout. &lt;/p&gt;
+
+&lt;p&gt;Clicking a &lt;strong&gt;Blog&lt;/strong&gt; (either the row depicting the blog or via a button) leads to a &lt;strong&gt;View&lt;/strong&gt; for each &lt;strong&gt;Blog&lt;/strong&gt; revealing more details of the &lt;strong&gt;Blog&lt;/strong&gt; such as a list of &lt;strong&gt;Posts&lt;/strong&gt;s for that &lt;strong&gt;Blog&lt;/strong&gt;. Links going in the reverse direction should also be coded. Again Bootstrap is used to improve presentation of this data.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Models&lt;/strong&gt; are improved to provide an &lt;strong&gt;Author&lt;/strong&gt; class with some attributes such as Name &amp;amp; Address (city will suffice).
+Concepts covered:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Data Annotations - to decorate fields for inclusion in &lt;strong&gt;Views&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Basic querying of POCO to populate &lt;strong&gt;ViewModels&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Bootstrap enhanced &lt;strong&gt;Views&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Some UI enhancements via jQuery/Bootstrap - perhaps integrated Google Map for &lt;strong&gt;Author&lt;/strong&gt; city.&lt;/li&gt;
+&lt;/ul&gt;
 </description>
         <pubDate>Mon, 19 Oct 2015 00:00:00 +0100</pubDate>
         <link>http://jkelleher.me/stage2/</link>
@@ -53,22 +31,25 @@ Concepts covered:
     
       <item>
         <title>Stage 1</title>
-        <description>&lt;h3&gt;Blog MVC Application for RAD301 (2015-16)&lt;/h3&gt;
+        <description>&lt;h4&gt;Blog MVC Application for RAD301 (2015-16)&lt;/h4&gt;
 
 &lt;p&gt;MVC App to work with Blogs &amp;amp; Posts. A number of branches (Stage&lt;em&gt;x&lt;/em&gt;) add progressively to the objectives of the app. Checkout each branch to see the new features.&lt;/p&gt;
 
 &lt;h4&gt;&lt;strong&gt;Stage 1&lt;/strong&gt; (w/s 12-10-15)&lt;/h4&gt;
 
-&lt;p&gt;&lt;img src=&quot;stage1.gif&quot; alt=&quot;stage1&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/stage1.gif&quot; alt=&quot;stage1&quot;&gt;&lt;/p&gt;
 
 &lt;p&gt;The Index action method of the Home Controller displays the list of Blogs. Clicking on each Blog displays details about that Blog (e.g. Title and Author).&lt;/p&gt;
 
-&lt;p&gt;Concepts examined:
-* Role of Controller as &amp;#39;director of operations&amp;#39; - routing.
-* Preparation of &lt;strong&gt;Views&lt;/strong&gt; either directly or through scaffolding
-* Initial minor role of &lt;strong&gt;Models&lt;/strong&gt; folder for &lt;strong&gt;Blog&lt;/strong&gt; and &lt;strong&gt;Post&lt;/strong&gt;
-* Introduction of &lt;strong&gt;ViewModels&lt;/strong&gt; folder to represent custom views of data in &lt;strong&gt;Models&lt;/strong&gt;
-* Preparation of data (artificially) in Controller for publishing through Views.&lt;/p&gt;
+&lt;p&gt;Concepts examined:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Role of Controller as &amp;#39;director of operations&amp;#39; - routing.&lt;/li&gt;
+&lt;li&gt;Preparation of &lt;strong&gt;Views&lt;/strong&gt; either directly or through scaffolding&lt;/li&gt;
+&lt;li&gt;Initial minor role of &lt;strong&gt;Models&lt;/strong&gt; folder for &lt;strong&gt;Blog&lt;/strong&gt; and &lt;strong&gt;Post&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Introduction of &lt;strong&gt;ViewModels&lt;/strong&gt; folder to represent custom views of data in &lt;strong&gt;Models&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Preparation of data (artificially) in Controller for publishing through Views.&lt;/li&gt;
+&lt;/ul&gt;
 </description>
         <pubDate>Mon, 12 Oct 2015 00:00:00 +0100</pubDate>
         <link>http://jkelleher.me/stage1/</link>

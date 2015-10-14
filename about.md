@@ -4,10 +4,17 @@ title: About
 permalink: /about/
 ---
 
-### More Information
+### Blog Practice Application
 
-tbc...
+This application forms a key exercise for RAD301 (2015-16). It is a vehicle for relating many aspects of ASP.NET MVC including:
 
-### Contact me
+* Controllers
+* Code First database generation
+* Querying datasets for surfacing through Views
+* Views incorporating CSS styling (via Bootstrap)
+* Data Migration to facilitate changes to model
+* Razor
+* Passing data between Views
+* Enhanced user interaction with jQuery
 
-[john@jkelleher.me](mailto:john@jkelleher.me)
+### For more details, consult the [class site.](class.jkelleher.me/rad301)
