@@ -18,7 +18,7 @@ Concepts covered:
 * Some UI enhancements via jQuery/Bootstrap - perhaps integrated Google Map for **Author** city.
 
 ####**Stage 1** (w/s 12-10-15)
-
+![stage1](stage1.gif)
 The Index action method of the Home Controller displays the list of Blogs. Clicking on each Blog displays details about that Blog (e.g. Title and Author).
 
 Concepts examined:
