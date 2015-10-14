@@ -11,7 +11,7 @@ title:            Blog
 tagline:          'RAD301 MVC App'
 description:      'A multi-branch worked example of ASP.NET MVC. Made by <a href="http://jkelleher.me" target="_blank">J Kelleher</a>.'
 url:              http://itsligo.github.io/blog/
-baseurl:          /blog
+baseurl:          http://itsligo.github.io/blog/
 
 author:
   name:           'John Kelleher'
