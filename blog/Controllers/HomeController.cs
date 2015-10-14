@@ -10,44 +10,40 @@ namespace blog.Controllers
 {
     public class HomeController : Controller
     {
-        public ActionResult Index()
-        {
-            // Retrieve (database?) or fashion some Blog entities/objects
-            // No database? So, make in-memory (or POCO) objects instead & populate ViewModel
-            var bvm = new BlogViewModel();    // a BlogViewModel object created
+        BlogViewModel bvm = new BlogViewModel();    // a BlogViewModel object created to front 'database'
+
+        public HomeController()     // initialise POCO 'database' here so available throughout class
+        {   // create some Blog objects
             bvm.Blogs = new List<Blog>()
                 { new Blog() { BlogTitle="Ode To Code", BlogAuthor="Scott Allen" },
                     new Blog() { BlogTitle="Hanselman Minutes", BlogAuthor="Scott Hanselman" } };
             bvm.NumberOfBlogs = bvm.Blogs.Count;
-            ViewBag.Title = "Blog List";
+        }
+
+        public ActionResult Index()
+        {
+            ViewBag.Title = "Blog List ("+bvm.NumberOfBlogs+")";
             return View(bvm);
         }
 
         public ActionResult Details(string id)
         {
-            // recreate 'database' mockup for expediency
-            var bvm = new BlogViewModel();    // a BlogViewModel object created
-            bvm.Blogs = new List<Blog>()
-                { new Blog() { BlogTitle="Ode To Code", BlogAuthor="Scott Allen" },
-                    new Blog() { BlogTitle="Hanselman Minutes", BlogAuthor="Scott Hanselman" } };
-            bvm.NumberOfBlogs = bvm.Blogs.Count;
             // look up Blog matching id
             Blog foundBlog = bvm.Blogs.Where(blg => blg.BlogTitle == id).FirstOrDefault();
-            ViewBag.Title = "Details of ";
+            // consider if couldn't be found
+            ViewBag.Title = (foundBlog!= null)?"Details of "+foundBlog.BlogTitle:"Could not find blog...";
             return View(foundBlog);
         }
 
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";
-
             return View();
         }
 
         public ActionResult Contact()
         {
             ViewBag.Message = "Your contact page.";
-
             return View();
         }
     }
