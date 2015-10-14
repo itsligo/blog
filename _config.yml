@@ -7,15 +7,15 @@ permalink:        pretty
 relative_permalinks: true
 
 # Setup
-title:            Hyde
-tagline:          'A Jekyll theme'
-description:      'A brazen two-column <a href="http://jekyllrb.com" target="_blank">Jekyll</a> theme that pairs a prominent sidebar with uncomplicated content. Made by <a href="https://twitter.com/mdo" target="_blank">@mdo</a>.'
-url:              http://hyde.getpoole.com
-baseurl:          /
+title:            Blog
+tagline:          'RAD301 MVC App'
+description:      'A multi-branch worked example of ASP.NET MVC. Made by <a href="http://jkelleher.me" target="_blank">J Kelleher</a>.'
+url:              http://itsligo.github.io/blog/
+baseurl:          http://itsligo.github.io/blog/
 
 author:
-  name:           'Mark Otto'
-  url:            https://twitter.com/mdo
+  name:           'John Kelleher'
+  url:            http://jkelleher.me
 
 paginate:         5
 
@@ -23,4 +23,4 @@ paginate:         5
 version:          2.1.0
 
 github:
-  repo:           https://github.com/poole/hyde
+  repo:           https://github.com/itsligo/blog
