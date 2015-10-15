@@ -17,4 +17,8 @@ This application forms a key exercise for RAD301 (2015-16). It is a vehicle for 
 * Passing data between Views
 * Enhanced user interaction with jQuery
 
-### For more details, consult the [class site.](class.jkelleher.me/rad301)
+Each week is recorded in a separate branch of the [repo]({{site.repo}}). You should checkout the appropriate branch to see how the work is done - preferably after you have attempted the objectives yourself. This short video shows how to checkout a branch:
+
+<script type="text/javascript" src="https://asciinema.org/a/27865.js" id="asciicast-27865" async></script>
+
+### For more details, consult the [class site.](http://class.jkelleher.me/rad301)
