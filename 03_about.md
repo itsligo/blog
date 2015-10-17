@@ -5,7 +5,7 @@ published: true
 permalink: /about/
 ---
 
-<img class="col one right" src="{{site.baseurl}}/img/prof_pic.jpg">
+<img class="col one right" src="{{site.baseurl}}img/prof_pic.jpg">
 
 I'm a lecturer in computing at [IT Sligo](www.itsligo.ie) and a [developer](http://jkelleher.me) currently interested in
 

@@ -3,7 +3,7 @@ layout: post
 title: Step 2
 published: true
 description: add database using EF
-img: /img/2.jpg
+img: img/2.jpg
 ---
 
 ####Branch **Stage 2** (w/s 19-10-15)

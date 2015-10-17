@@ -11,7 +11,7 @@
     <div class="thumbnail">
         <a href="{{ branch.redirect }}" target="_blank">
         {% if branch.img %}
-        <img class="thumbnail" src="{{site.baseurl}}/{{ branch.img }}"/>
+        <img class="thumbnail" src="{{site.baseurl}}{{ branch.img }}"/>
         {% else %}
         <div class="thumbnail blankbox"></div>
         {% endif %}    
@@ -29,7 +29,7 @@
     <div class="thumbnail">
         <a href="{{ site.baseurl }}{{ branch.url }}">
         {% if branch.img %}
-        <img class="thumbnail" src="{{site.baseurl}}/{{ branch.img }}"/>
+        <img class="thumbnail" src="{{site.baseurl}}{{ branch.img }}"/>
         {% else %}
         <div class="thumbnail blankbox"></div>
         {% endif %}    
