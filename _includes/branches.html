@@ -1,0 +1,47 @@
+<!-- partial to iterate over branches in _branches - excludes those with yaml published=false -->
+
+{% for branch in site.branches %}
+
+{% if branch.published == false %}
+{% continue %}
+{% endif %}
+
+{% if branch.redirect %}
+<div class="branch">
+    <div class="thumbnail">
+        <a href="{{ branch.redirect }}" target="_blank">
+        {% if branch.img %}
+        <img class="thumbnail" src="{{ branch.img }}"/>
+        {% else %}
+        <div class="thumbnail blankbox"></div>
+        {% endif %}    
+        <span>
+            <h1>{{ branch.title }}</h1>
+            <br/>
+            <p>{{ branch.description }}</p>
+        </span>
+        </a>
+    </div>
+</div>
+{% else  %}
+
+<div class="branch">
+    <div class="thumbnail">
+        <a href="{{ site.baseurl }}{{ branch.url }}">
+        {% if branch.img %}
+        <img class="thumbnail" src="{{ branch.img }}"/>
+        {% else %}
+        <div class="thumbnail blankbox"></div>
+        {% endif %}    
+        <span>
+            <h1>{{ branch.title }}</h1>
+            <br/>
+            <p>{{ branch.description }}</p>
+        </span>
+        </a>
+    </div>
+</div>
+
+{% endif %}
+
+{% endfor %}
