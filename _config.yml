@@ -5,7 +5,7 @@ email: kelleher.john@itsligo.ie
 description: > # this means to ignore newlines until "baseurl:"
   A simple, whitespace, helvetica based portfolio theme.
 baseurl: /blog/ # the subpath of your site, e.g. /blog/
-url: https://itsligo.github.com/blog/ # the base hostname & protocol for your site
+url: https://itsligo.github.com/blog # the base hostname & protocol for your site
 twitter: johnkelleher
 github_username:  jkelleher
 website: "jkelleher.me"
