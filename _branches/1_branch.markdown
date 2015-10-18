@@ -8,7 +8,7 @@ img: img/1.jpg
 ####**Stage 1** (w/s 12-10-15)
 
 <br>
-![stage1]({{site.baseurl}}img/stage1.gif)
+![stage1]({{site.baseurl}}/img/stage1.gif)
 
 The Index action method of the Home Controller displays the list of Blogs. Clicking on each Blog displays details about that Blog (e.g. Title and Author).
 
