@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: branch
 title: Step 2
 published: true
 description: add database using EF

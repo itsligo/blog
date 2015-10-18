@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: branch
 title: Step 1
 published: true
 description: build basic asp.net mvc app
