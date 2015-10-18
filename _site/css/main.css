@@ -73,13 +73,10 @@ h1, h2, h3, h4, h5, h6 {
  * Links
  */
 a {
-  color: #666;
-  text-decoration: none;
-  /*
-  &:visited {
-      color: darken($brand-color, 15%); 
-  }
-  */ }
+  color: #B7D12A;
+  text-decoration: none; }
+  a:visited {
+    color: #7f911d; }
   a:hover {
     color: #B7D12A;
     text-decoration: none; }

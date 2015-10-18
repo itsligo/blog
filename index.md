@@ -16,5 +16,5 @@ This application forms a key exercise for RAD301 (2015-16). It is a vehicle for 
 * Passing data between Views
 * Enhanced user interaction with jQuery
 
-Each week is recorded in a separate branch of the [repo]({{site.repo}}). You should checkout the appropriate branch to see how the work is done - preferably after you have attempted the objectives yourself.
+Each week is recorded in a separate branch of the [repo]({{site.repo}}). You should [checkout](https://asciinema.org/a/27865) the appropriate branch to see how the work is done - preferably after you have attempted the objectives yourself.
 
