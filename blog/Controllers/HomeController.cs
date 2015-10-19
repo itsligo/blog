@@ -10,6 +10,7 @@ namespace blog.Controllers
 {
     public class HomeController : Controller
     {
+        public BlogDb db = new BlogDb();    // our database
         BlogViewModel bvm = new BlogViewModel();    // a BlogViewModel object created to front 'database'
 
         public HomeController()     // initialise POCO 'database' here so available throughout class
@@ -18,10 +19,15 @@ namespace blog.Controllers
                 { new Blog() { BlogTitle="Ode To Code", BlogAuthor="Scott Allen" },
                     new Blog() { BlogTitle="Hanselman Minutes", BlogAuthor="Scott Hanselman" } };
             bvm.NumberOfBlogs = bvm.Blogs.Count;
+            db.Blogs.Add(new Blog() { BlogTitle = "Ode To Code", BlogAuthor = "Scott Allen" });
+            db.Blogs.Add(new Blog() { BlogTitle = "Hanselman Minutes", BlogAuthor = "Scott Hanselman" });
+            db.SaveChanges();   // persist data to storage
         }
 
         public ActionResult Index()
         {
+            bvm.Blogs = db.Blogs.ToList();
+            bvm.NumberOfBlogs = bvm.Blogs.Count();
             ViewBag.Title = "Blog List ("+bvm.NumberOfBlogs+")";
             return View(bvm);
         }
