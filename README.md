@@ -5,7 +5,7 @@ Like the look of Lia's stylish [Jekyll](www.jekyllrb.com) theme and needed somet
 
 I wanted something that would cope well with a single page descriptor of a given repo or alternatively could have sub-pages to describe individual branches of development. So I swapped out the Portfolio for Branches and changed the index.html for an index.md so that I could more readily add some YAML front-matter to describe the repo in question.
 
-I then created a matching home.html page to scaffold the index.md. I added some [liquid](http://liquidmarkup.org) markup to drop all references to branches if there were none so that the navigation would reflect this.
+I then created a matching home.html page to scaffold the index.md. I added some [liquid](http://liquidmarkup.org) markup to drop all references to branches if there were none so that the navigation would reflect this
 
 
 ___
