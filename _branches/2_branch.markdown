@@ -17,7 +17,6 @@ Links going in the reverse direction should also be coded. Again Bootstrap is us
 
 Concepts covered:
 
-* Data Annotations - to decorate fields for inclusion in **Views**
+* Data Annotations - to decorate fields for inclusion in **Views** for (say) localisation
 * Basic querying of POCO to populate **ViewModels**
 * Bootstrap enhanced **Views**
-* Some UI enhancements via jQuery/Bootstrap - perhaps integrated Google Map for **Author** city.
