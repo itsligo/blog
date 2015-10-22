@@ -450,6 +450,10 @@ pre {
 .three {
   width: 100%; }
 
+.boxed {
+  border: 1px solid #333;
+  margin: 7px; }
+
 .caption {
   height: 100%;
   color: #aaa;
