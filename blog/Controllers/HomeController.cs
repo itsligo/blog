@@ -11,31 +11,22 @@ namespace blog.Controllers
     public class HomeController : Controller
     {
         public BlogDb db = new BlogDb();    // our database
-        BlogViewModel bvm = new BlogViewModel();    // a BlogViewModel object created to front 'database'
-
-        public HomeController()     // initialise POCO 'database' here so available throughout class
-        {   // create some Blog objects
-            bvm.Blogs = new List<Blog>()
-                { new Blog() { BlogTitle="Ode To Code", BlogAuthor="Scott Allen" },
-                    new Blog() { BlogTitle="Hanselman Minutes", BlogAuthor="Scott Hanselman" } };
-            bvm.NumberOfBlogs = bvm.Blogs.Count;
-            db.Blogs.Add(new Blog() { BlogTitle = "Ode To Code", BlogAuthor = "Scott Allen" });
-            db.Blogs.Add(new Blog() { BlogTitle = "Hanselman Minutes", BlogAuthor = "Scott Hanselman" });
-            db.SaveChanges();   // persist data to storage
-        }
+        BlogViewModel bvm = new BlogViewModel();    // a BlogViewModel object created to surface database entities
 
         public ActionResult Index()
         {
+            // retreive Blogs from db
             bvm.Blogs = db.Blogs.ToList();
             bvm.NumberOfBlogs = bvm.Blogs.Count();
             ViewBag.Title = "Blog List ("+bvm.NumberOfBlogs+")";
             return View(bvm);
         }
 
-        public ActionResult Details(string id)
+        public ActionResult Details(int id)
         {
             // look up Blog matching id
-            Blog foundBlog = bvm.Blogs.Where(blg => blg.BlogTitle == id).FirstOrDefault();
+            //Blog foundBlog = db.Blogs.Where(blg => blg.Id == id).FirstOrDefault();
+            Blog foundBlog = db.Blogs.Find(id);
             // consider if couldn't be found
             ViewBag.Title = (foundBlog!= null)?"Details of "+foundBlog.BlogTitle:"Could not find blog...";
             return View(foundBlog);
