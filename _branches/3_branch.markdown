@@ -8,7 +8,7 @@ img: img/3.jpg
 
 ####Branch **Stage 3** (w/s 26-10-15)
 
-![stage3]({{site.baseurl}}/img/stage3.png)
+![stage3]({{site.baseurl}}/img/stage3.png){: .right .boxed}
 
 
 The database is now persisting all data. We can over-ride the default (invisible) connection string in web.config by specifying out own. Use Server Explorer to get the *Data Source* for the server. Or use [www.connectionstrings.com](http://www.connectionstrings.com) to fashion the connstring for you.

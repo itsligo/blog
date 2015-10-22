@@ -268,6 +268,10 @@ width: 66.66%;
 .three{
 width: 100%;
 }
+.boxed{
+    border: 1px solid $grey-color-dark;
+    margin: 7px;
+}
 .caption{
 height: 100%;
 color: $caption_color;
