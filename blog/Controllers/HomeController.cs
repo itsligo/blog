@@ -18,6 +18,8 @@ namespace blog.Controllers
             // retreive Blogs from db
             bvm.Blogs = db.Blogs.ToList();
             bvm.NumberOfBlogs = bvm.Blogs.Count();
+            bvm.PostCount = 0;
+            bvm.Blogs.ForEach(blg => bvm.PostCount += blg.Posts.Count());
             ViewBag.Title = "Blog List ("+bvm.NumberOfBlogs+")";
             return View(bvm);
         }

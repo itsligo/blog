@@ -12,5 +12,6 @@ namespace blog.ViewModels
     {
         public int NumberOfBlogs { get; set; }
         public List<Blog> Blogs { get; set; }
+        public int PostCount { get; set; }
     }   // end BlogViewModel
 }

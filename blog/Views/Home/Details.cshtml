@@ -1,34 +1,52 @@
 ﻿@model blog.Models.Blog
 
-<h2>@ViewBag.Title</h2>
-
+@section scripts{
+    <script type="text/javascript">
+        $(function(){
+            $('.panel').hover(
+                function(){$(this).find('.panel-footer').slideDown(250);},
+                function(){$(this).find('.panel-footer').slideUp(250); //.fadeOut(205)
+            });
+        })
+    </script>
+}
 @if (Model != null)
 {
-    <div>
-        <h4>Blog</h4>
-        <hr />
-        <dl class="dl-horizontal">
-            <dt>
-                @Html.DisplayNameFor(model => model.BlogTitle)
-            </dt>
+    <div class="container">
+        <div class="row"><br /><br /><br />
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <h3>
+                        @Html.DisplayFor(model => model.BlogTitle)<small>&nbsp;&nbsp;@Html.DisplayFor(model => model.BlogAuthor)</small><span>
+                            @Html.ActionLink("Edit", "Edit", new { id = Model.Id }, new { @class = "btn btn-sm btn-warning " })
+                        @Html.ActionLink("Back", "Index", null, new { @class = "btn btn-sm btn-primary" })
+                    </span>
+                </h3>
+            </div>
+            </div>
+        </div>
 
-            <dd>
-                @Html.DisplayFor(model => model.BlogTitle)
-            </dd>
-
-            <dt>
-                @Html.DisplayNameFor(model => model.BlogAuthor)
-            </dt>
-
-            <dd>
-                @Html.DisplayFor(model => model.BlogAuthor)
-            </dd>
-
-        </dl>
+        <div class="row">
+            @foreach (var post in Model.Posts)
+            {
+                <div class="col-md-2 col-sm-6 col-xs-6">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <h4>@post.PostTitle.Substring(0, Math.Min(post.PostTitle.Length, 20))</h4>
+                            <p>@post.PostContent.Substring(0, Math.Min(post.PostContent.Length, 25))...</p>
+                        </div>
+                        <div class="panel-footer">@post.PostingDate.ToString("dd MMM yyyy")</div>
+                    </div>
+                </div>
+            }
+        </div>
     </div>
-    <p>
-        @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
-    </p>
-
 }
-@Html.ActionLink("Back to List", "Index")
+else
+{
+    <div class="alert alert-warning">
+        <h4>No such Blog found</h4>
+        <a href="" class="btn btn-info"></a>
+        @Html.ActionLink("All Blogs", "Index", null, new { @class = "btn btn-sm btn-warning" })
+    </div>
+}
