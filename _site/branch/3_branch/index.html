@@ -10,8 +10,8 @@
     <meta name="description" content="A simple, whitespace, helvetica based portfolio theme.
 ">
 
-    <link rel="stylesheet" href="/blog/css/main.css">
-    <link rel="canonical" href="https://itsligo.github.com/blog/blog/branch/3_branch/">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="canonical" href="https://itsligo.github.com/blog/branch/3_branch/">
 
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 </head>
@@ -27,28 +27,28 @@
 
       <div class="trigger">
         <!--  instead of blog -->
-        <!-- <a class="page-link" href="/blog/"><strong>home</strong></a> -->
-        <a class="page-link" href="/blog/" ><span class="tooltip--bottom" data-tooltip="home"><i class="fa fa-lg fa-home"></i>&nbsp;</span></a>
+        <!-- <a class="page-link" href="/"><strong>home</strong></a> -->
+        <a class="page-link" href="/" ><span class="tooltip--bottom" data-tooltip="home"><i class="fa fa-lg fa-home"></i>&nbsp;</span></a>
         
-           <!-- <a class="page-link" href="/blog/branches" alt="branches'">branches</a> -->
-           <a class="page-link" href="/blog/branches" ><span class="tooltip--bottom" data-tooltip="branches"><i class="fa fa-lg fa-code-fork"></i>&nbsp;</span></a>
+           <!-- <a class="page-link" href="/branches" alt="branches'">branches</a> -->
+           <a class="page-link" href="/branches" ><span class="tooltip--bottom" data-tooltip="branches"><i class="fa fa-lg fa-code-fork"></i>&nbsp;</span></a>
         
-        <a class="page-link" href="/blog/about" ><span class="tooltip--bottom" data-tooltip="about"><i class="fa fa-lg fa-info"></i>&nbsp;</span></a>
+        <a class="page-link" href="/about" ><span class="tooltip--bottom" data-tooltip="about"><i class="fa fa-lg fa-info"></i>&nbsp;</span></a>
 
         <a class="page-link" href="https://github.com/itsligo/blog" ><span class="tooltip--bottom" data-tooltip="repo"><i class="fa fa-lg fa-github"></i>&nbsp;</span></a>
         
-        <!-- <a class="page-link" href="/blog/about">about</a> -->
+        <!-- <a class="page-link" href="/about">about</a> -->
         <!-- 
           
-          <a class="page-link" href="/blog/branches/">branches</a>
+          <a class="page-link" href="/branches/">branches</a>
           
         
           
-          <a class="page-link" href="/blog/about/">about john kelleher</a>
+          <a class="page-link" href="/about/">about john kelleher</a>
           
         
           
-          <a class="page-link" href="/blog/index.html">blog</a>
+          <a class="page-link" href="/index.html">blog</a>
           
         
           
@@ -68,18 +68,18 @@
         <div class="post">
 
   <header class="post-header">
-    <h1 class="post-title"><a href="/blog/branches"><i class="fa fa-lg fa-fw fa-code-fork"></i></a>Step 3</h1>
+    <h1 class="post-title"><a href="/branches"><i class="fa fa-lg fa-fw fa-code-fork"></i></a>Step 3</h1>
     <p class="post-meta"></p>
   </header>
 
   <article class="post-content">
     <h4 id="branch-stage-3-ws-26-10-15">Branch <strong>Stage 3</strong> (w/s 26-10-15)</h4>
 
-<p><img src="/blog/img/stage3.png" alt="stage3" class="right boxed" /></p>
+<p><img src="/img/stage3.png" alt="stage3" class="right boxed" /></p>
 
 <p>The database is now persisting all data. We can over-ride the default (invisible) connection string in web.config by specifying out own. Use Server Explorer to get the <em>Data Source</em> for the server. Or use <a href="http://www.connectionstrings.com">www.connectionstrings.com</a> to fashion the connstring for you.</p>
 
-<p>Next we seed the database properly rather than through the ctor of the <strong>HomeController</strong> - that’s why we saw duplicated data on screen in previous branches - the ctor was being called on each page refresh. Use a dedicated <code>DropCreateDatabaseAlways&amp;lt;OurDbContext&amp;gt; Class</code> and over-ride its <strong>Seed</strong> method to provide seed data. Ensure you add <code>System.Data.Entity.Database.SetInitializer(new  DataContextInitializer());</code> to prompt EF (Entity Framework) to use your initialiser.</p>
+<p>Next we seed the database properly rather than through the ctor of the <strong>HomeController</strong> - that’s why we saw duplicated data on screen in previous branches - the ctor was being called on each page refresh. Use a dedicated <code>DropCreateDatabaseAlways&lt;OurDbContext&gt; Class</code> and over-ride its <strong>Seed</strong> method to provide seed data. Ensure you add <code>System.Data.Entity.Database.SetInitializer(new  DataContextInitializer());</code> to prompt EF (Entity Framework) to use your initialiser.</p>
 
 <p>Next, we fix up the <strong>More</strong> link from the home page so that it provides the <strong>Id</strong> of each <strong>Blog</strong>. Then we use <strong>Find()</strong> to look up the associated <strong>Blog</strong> in the database.</p>
 

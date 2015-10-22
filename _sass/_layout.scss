@@ -269,7 +269,9 @@ width: 66.66%;
 width: 100%;
 }
 .boxed{
-    border: 1px solid $grey-color-dark;
+    border: 1px solid $grey-color-light;
+    display:block;
+    width: 100%;
     margin: 7px;
 }
 .caption{
