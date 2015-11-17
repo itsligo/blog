@@ -9,9 +9,9 @@ namespace blog.Models
     public class Blog
     {
         public int Id { get; set; }     // primary key in the resultant db
-        [Display(Name="Title of Blog")]
+        [Display(Name="Title")]
         public string BlogTitle { get; set; }
-        [Display(Name = "Author Name")]
+        [Display(Name = "Author")]
         public string BlogAuthor { get; set; }
         // navigation property to constituent Post objects - inferred as relationships implemented by foreign keys in SQL
         public virtual ICollection<Post> Posts { get; set; }

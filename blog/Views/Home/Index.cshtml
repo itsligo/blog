@@ -6,9 +6,10 @@
 <div class="row">
     <div class="panel panel-default">
         <div class="panel-body">
-            @{if (Model.Blogs.Count > 0)  // Handle where there are no Blogs  
+            @{if (Model.Blogs.Count > 0)  // Handle where there are no Blogs
                 {    <h2>@Model.Blogs.Count Blogs w/ @Model.PostCount Posts</h2>}
-                else { <h2>No Blogs found</h2>}
+                else
+                { <h2>No Blogs found</h2>}
             }
         </div>
     </div>
@@ -18,6 +19,7 @@
         @* Looks up the first Blog to query its Display annotation from Model definition *@
         <th>@Html.DisplayNameFor(Model => Model.Blogs.FirstOrDefault().BlogTitle)</th>
         <th>@Html.DisplayNameFor(Model => Model.Blogs.FirstOrDefault().BlogAuthor)</th>
+        <th>No Posts</th>
         <th>
         </th>  @*for control link column*@
     </tr>
@@ -31,13 +33,27 @@
             <td>
                 @*display the value of the property (i.e. 'Ode to Code')*@
                 @Html.DisplayFor(modelItem => item.BlogAuthor)
+            </td>
+            <td>
+                @if (item.Posts.Count == 0)
+                {
+                    @:<span class="badge alert-danger">@item.Posts.Count</span>
+                }
+                else
+                {
+                    @:<span class="badge alert-success">@item.Posts.Count</span>
+                }
+                @*<span class="badge @(item.Posts.Count==0)?" alert-danger":"alert-success">@item.Posts.Count</span>*@
+            </td>
             <td>
                 @*create a <a> tag to redirect to Details action method *@
                 @Html.ActionLink("More", "Details", new { id = item.Id }, new { @class = "btn btn-xs  btn-primary" })
             </td>
         </tr>
     }
-    @if (Model.Blogs.Count == 0){
-        <tr><td>No records</td><td></td><td></td></tr>
-    }
 </table>
+@Html.ActionLink("Add Blog", "Create", null, new { @class = "btn btn-success" })
+@if (Model.Blogs.Count == 0)
+{
+    <tr><td>No records</td><td></td><td></td></tr>
+}

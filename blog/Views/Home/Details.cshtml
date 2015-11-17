@@ -20,6 +20,7 @@
                         @Html.DisplayFor(model => model.BlogTitle)<small>&nbsp;&nbsp;@Html.DisplayFor(model => model.BlogAuthor)</small><span>
                             @Html.ActionLink("Edit", "Edit", new { id = Model.Id }, new { @class = "btn btn-sm btn-warning " })
                         @Html.ActionLink("Back", "Index", null, new { @class = "btn btn-sm btn-primary" })
+                        @Html.ActionLink("Delete", "Delete", new {blgId = Model.Id }, new { @class="btn btn-sm btn-danger"})
                     </span>
                 </h3>
             </div>

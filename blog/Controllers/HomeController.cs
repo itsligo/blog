@@ -3,6 +3,7 @@ using blog.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Web;
 using System.Web.Mvc;
 
@@ -24,14 +25,68 @@ namespace blog.Controllers
             return View(bvm);
         }
 
-        public ActionResult Details(int id)
+        public ActionResult Details(int? id)
         {
+            if (id == null)
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             // look up Blog matching id
             //Blog foundBlog = db.Blogs.Where(blg => blg.Id == id).FirstOrDefault();
             Blog foundBlog = db.Blogs.Find(id);
-            // consider if couldn't be found
-            ViewBag.Title = (foundBlog!= null)?"Details of "+foundBlog.BlogTitle:"Could not find blog...";
+            // if not found
+            if (foundBlog == null) return HttpNotFound();
+            ViewBag.Title = "Details of "+foundBlog.BlogTitle;
             return View(foundBlog);
+        }
+
+        [HttpGet]
+        public ActionResult Create()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult Create(Blog blg)
+        {
+            if (ModelState.IsValid)
+            {
+                db.Blogs.Add(blg);
+                db.SaveChanges();
+                return RedirectToAction("Index");
+            }
+            return View(blg);
+        }
+
+        [HttpGet]
+        public ActionResult Delete(int? blgId)
+        {
+            if (blgId == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            Blog blog = db.Blogs.Find(blgId);
+            if (blog == null)
+            {
+                return HttpNotFound();
+            }
+            return View(blog);
+        }
+
+        [HttpPost, ActionName("Delete")]
+        public ActionResult DeleteConfirmed(int blgId)
+        {
+            Blog blg = db.Blogs.Find(blgId);
+            db.Blogs.Remove(blg);
+            db.SaveChanges();
+            return RedirectToAction("Index");
+        }
+
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing)
+            {
+                db.Dispose();
+            }
+            base.Dispose(disposing);
         }
 
         public ActionResult About()
