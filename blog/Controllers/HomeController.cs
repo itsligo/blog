@@ -75,6 +75,12 @@ namespace blog.Controllers
         public ActionResult DeleteConfirmed(int blgId)
         {
             Blog blg = db.Blogs.Find(blgId);
+            var postsToDelete = blg.Posts.ToList();
+            foreach (var item in postsToDelete)
+            {
+                db.Posts.Remove(item);
+            }
+
             db.Blogs.Remove(blg);
             db.SaveChanges();
             return RedirectToAction("Index");
