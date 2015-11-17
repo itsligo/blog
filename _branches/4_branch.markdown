@@ -15,9 +15,9 @@ Next we extend the **CRUD** operations by adding pages for *Create* and *Delete*
 
 Scaffolding can be used to generate much of the code - this creates action methods in the controller and corresponding views in the appropriate Views folder. You will need to re-style these boilerplate coded templates to suit your own needs.
 
-###Referential Integrity
+####Referential Integrity
 You'll notice that the *Delete* code is more complicated than *Create*. This is due to the default referential integrity constraints imposed for 1-to-many relations such as between a **Blog** and its **Posts** - a common occurence. There are several ways to handle this but the simplest for now is before we delete a **Blog**, we delete all related **Post**s. In this way, the the **Blog** can be relieved of the referential integrity constraint.
 
-###Get and Post
+####Get and Post
 You'll notice therer are seemingly two methods for both *Create* and *Delete*. Remember that the *Create* View must first be presented to the user so that values can be input. This is invoked by calling the *Create* action method using the HTTP verb GET. When the form is completed and submitted, the version of the Create method marked as HTTP POST is called and passed the data gathered from the form completed by the user. Only then can the data be persisted to the database.
 The *Delete* handling is very similar save for the issues around referential integrity mentioned above.
