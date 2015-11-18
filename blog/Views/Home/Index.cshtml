@@ -33,7 +33,6 @@
             <td>
                 @*display the value of the property (i.e. 'Ode to Code')*@
                 @Html.DisplayFor(modelItem => item.BlogAuthor)
-                <span class="badge">@item.Posts.Count</span>
             </td>
             <td>
                 @if (item.Posts.Count == 0)

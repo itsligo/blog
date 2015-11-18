@@ -136,6 +136,7 @@
     <Compile Include="Models\BlogInitialiser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Models\Blog.cs" />
+    <Compile Include="ViewModels\BlogSelectListVM.cs" />
     <Compile Include="ViewModels\BlogViewModel.cs" />
   </ItemGroup>
   <ItemGroup>

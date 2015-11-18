@@ -29,14 +29,14 @@ namespace blog.Controllers
 
         public ActionResult Details(int? id)
         {
-            if (id == null)
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            if (id == null) return View("Index");   // for when no param provided
             // look up Blog matching id
             //Blog foundBlog = db.Blogs.Where(blg => blg.Id == id).FirstOrDefault();
             Blog foundBlog = db.Blogs.Find(id);
-            // if not found
-            if (foundBlog == null) return HttpNotFound();
-            ViewBag.Title = "Details of "+foundBlog.BlogTitle;
+            // consider if couldn't be found
+            ViewBag.Title = (foundBlog!= null)?"Details of "+foundBlog.BlogTitle:"Could not find blog...";
+
+            ViewBag.blogsList = new BlogSelectListVM();
             return View(foundBlog);
         }
 
