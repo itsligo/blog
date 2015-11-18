@@ -16,7 +16,7 @@ namespace blog.Models
         [Required]
         public string BlogAuthor { get; set; }
         // navigation property to constituent Post objects - inferred as relationships implemented by foreign keys in SQL
-        public ICollection<Post> Posts { get; set; }
+        public virtual ICollection<Post> Posts { get; set; }
     }
 
     // Manages details of a single Post (of a Blog)
