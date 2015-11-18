@@ -21,23 +21,9 @@
                         @Html.DisplayFor(model => model.BlogTitle)<small>&nbsp;&nbsp;@Html.DisplayFor(model => model.BlogAuthor)</small><span>
                             @Html.ActionLink("Edit", "Edit", new { id = Model.Id }, new { @class = "btn btn-sm btn-warning " })
                             @Html.ActionLink("Back", "Index", null, new { @class = "btn btn-sm btn-primary" })
-<<<<<<< Updated upstream
                             @Html.ActionLink("Delete", "Delete", new {blgId = Model.Id }, new { @class="btn btn-sm btn-danger"})
                         </span>
                     </h3>
-=======
-                        </span>
-                    </h3>
-                    @using (@Html.BeginForm("Details", "Home", FormMethod.Get, new { @class = "form-horizontal", @role = "form" }))
-                    {
-                        <div class="col-sm-2">
-                            @Html.DropDownListFor(m=>m., ViewBag.blogsList)
-                        </div>
-                        <div class="col-sm-1">
-                            <button class="btn btn-block btn-primary">Select</button>
-                        </div>
-                    }
->>>>>>> Stashed changes
                 </div>
             </div>
         </div>
