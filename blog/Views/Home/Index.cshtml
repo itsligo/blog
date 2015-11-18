@@ -33,6 +33,7 @@
             <td>
                 @*display the value of the property (i.e. 'Ode to Code')*@
                 @Html.DisplayFor(modelItem => item.BlogAuthor)
+                <span class="badge">@item.Posts.Count</span>
             </td>
             <td>
                 @if (item.Posts.Count == 0)
@@ -53,6 +54,8 @@
     }
 </table>
 @Html.ActionLink("Add Blog", "Create", null, new { @class = "btn btn-success" })
+@Html.ActionLink("Create Blog", "Create")
+<a href="/Home/Create" class="btn btn-warning">Make a Blog</a>
 @if (Model.Blogs.Count == 0)
 {
     <tr><td>No records</td><td></td><td></td></tr>

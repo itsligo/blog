@@ -17,7 +17,7 @@ namespace blog.Controllers
         public ActionResult Index()
         {
             // retreive Blogs from db
-            bvm.Blogs = db.Blogs.ToList();
+            bvm.Blogs = db.Blogs.Include("Posts").ToList();
             bvm.NumberOfBlogs = bvm.Blogs.Count();
             bvm.PostCount = 0;
             bvm.Blogs.ForEach(blg => bvm.PostCount += blg.Posts.Count());
